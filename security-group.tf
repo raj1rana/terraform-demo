@@ -1,5 +1,5 @@
 //this file contains the security groups for the resources
-// there are 2 security for alb-ec2, ec-2-client-ssh, RDS-ec-2
+// there are 3 security for alb-ec2, ec-2-client-ssh, RDS-ec-2
 
 
 resource "aws_security_group" "theo-security-group-alb-ec-2" {
