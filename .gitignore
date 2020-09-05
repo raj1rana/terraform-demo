@@ -1,0 +1,7 @@
+*.tfvars
+.terraform/*
+*.terraform.tfstate.lock.info
+keypairs/
+*.tfstate
+*.tfstate.*
+.idea/
