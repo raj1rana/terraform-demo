@@ -1,7 +1,8 @@
 *.tfvars
 .terraform/*
 *.terraform.tfstate.lock.info
-keypairs/
+keypairs/*
 *.tfstate
 *.tfstate.*
 .idea/
+cloud.tf

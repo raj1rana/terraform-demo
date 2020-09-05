@@ -35,11 +35,19 @@ resource "aws_security_group" "theo-security-group-ec-2-connection" {
   vpc_id = aws_vpc.theo-vpc.id
 
   ingress {
+    from_port = 3306
+    protocol = "tcp"
+    to_port = 3306
+    cidr_blocks = [aws_subnet.theo-rds-subnet.cidr_block]
+    description = "MYSQL"
+  }
+  ingress {
     from_port = 22
     protocol = "tcp"
     to_port = 22
     cidr_blocks = var.ith_ips
   }
+
   egress {
     from_port = 0
     protocol = "-1"
@@ -53,25 +61,3 @@ resource "aws_security_group" "theo-security-group-ec-2-connection" {
 
 }
 
-resource "aws_security_group" "theo-ec-2_RDS" {
-  name = "theo-ec-2_RDS"
-  description = "for communication between rds and ec-2"
-  vpc_id = aws_vpc.theo-vpc.id
-  ingress {
-    from_port = 3306
-    protocol = "tcp"
-    to_port = 3306
-
-  }
-
-  egress {
-    from_port = 0
-    protocol = "-1"
-    to_port = 0
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  tags = {
-    Name="theo-RDS-ec2"
-    For="RDS<=>EC-2"
-  }
-}
