@@ -16,3 +16,9 @@ resource "aws_route_table_association" "theo-association" {
 
   route_table_id = aws_route_table.theo-public.id
 }
+resource "aws_route_table_association" "theo-association-1" {
+  count = length(var.public_subnet_2)
+  subnet_id = element(aws_subnet.theo-public-subnet-2.*.id, count.index )
+
+  route_table_id = aws_route_table.theo-public.id
+}
