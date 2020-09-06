@@ -73,3 +73,12 @@ variable "theo_db_user" {
 variable "rds_instance_class" {
   default = "db.r4.large"
 }
+variable "s3_policy_file" {
+  default = "s3-policy.json"
+}
+variable "s3_user_policy" {
+  default ="s3-user-policy.json"
+}
+variable "domain_name" {
+  default = "beta.executivelaunchpad.net"
+}
