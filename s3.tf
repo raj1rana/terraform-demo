@@ -1,7 +1,6 @@
 # for s3 bucket to keep static data
-resource "aws_s3_bucket" "integrations-lite-staticfiles-s3-bucket" {
-  region = var.region
-  bucket = "integrations-lite-staticfiles"
+resource "aws_s3_bucket" "theo-staticfiles-s3-bucket" {
+  bucket = "theo-staticfiles-s3-bucket"
   acl = "public-read"
   cors_rule {
     allowed_headers = ["*"]
