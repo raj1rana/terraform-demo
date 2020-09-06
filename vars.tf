@@ -57,3 +57,19 @@ variable "public_subnet_6" {
 variable "route_table_CIDR_block" {
   default = "0.0.0.0/0"
 }
+variable "rds_db_pass_master" {}
+
+variable "rds_db_user_master" {}
+variable "rds_backup_retention_period" {
+  type = number
+  default = 14
+}
+variable "rds_backup_window" {
+  default = "07:00-09:00"
+}
+variable "theo_db_user" {
+  default = "theoLiveDB"
+}
+variable "rds_instance_class" {
+  default = "db.r4.large"
+}
