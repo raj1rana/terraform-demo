@@ -82,3 +82,6 @@ variable "s3_user_policy" {
 variable "domain_name" {
   default = "beta.executivelaunchpad.net"
 }
+variable "cdn_domain_name" {
+  default = "cdn.executivelaunchpad.net"
+}

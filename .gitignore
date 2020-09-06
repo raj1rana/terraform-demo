@@ -6,6 +6,5 @@ keypairs/*
 *.tfstate.*
 .idea/
 cloud.tf
-certificateDNSValidation.txt
-s2user.txt
+*.txt
 hosts

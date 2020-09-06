@@ -12,3 +12,6 @@ resource "aws_s3_bucket" "theo-staticfiles-s3-bucket" {
 
   policy = file(var.s3_policy_file)
 }
+locals {
+  s3_origin_id="${aws_s3_bucket.theo-staticfiles-s3-bucket.arn}-${aws_s3_bucket.theo-staticfiles-s3-bucket.id}"
+}
