@@ -1,6 +1,6 @@
 # this file is for RDS and its cluster
 resource "aws_db_subnet_group" "theo-aws-db-subnet-group" {
-  subnet_ids = [aws_subnet.theo-public-subnet-1.id, aws_subnet.theo-public-subnet-2.id, aws_subnet.theo-public-subnet-3.id]
+  subnet_ids = [aws_subnet.theo-rds-subnet.id]
 }
 resource "aws_rds_cluster" "theo-db" {
   cluster_identifier      = "theo-cluster"
